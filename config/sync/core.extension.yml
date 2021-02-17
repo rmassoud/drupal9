@@ -12,7 +12,6 @@ module:
   contact: 0
   contextual: 0
   datetime: 0
-  devel: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0
@@ -39,7 +38,6 @@ module:
   toolbar: 0
   tour: 0
   user: 0
-  webprofiler: 0
   views: 10
   standard: 1000
 theme:
