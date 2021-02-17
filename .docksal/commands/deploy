@@ -4,4 +4,4 @@
 #: exec_target=cli
 
 drush updb -y
-drush cim
+drush cim -y
