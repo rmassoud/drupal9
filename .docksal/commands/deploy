@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Execute the whole script inside cli container
+#: exec_target=cli
+
+drush updb -y
+drush cim
