@@ -3,5 +3,6 @@
 # Execute the whole script inside cli container
 #: exec_target=cli
 
+composer install --prefer-dist --no-progress --no-suggest --optimize-autoloader
 drush updb -y
 drush cim -y
