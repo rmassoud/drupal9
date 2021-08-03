@@ -20,13 +20,14 @@
         "drupal/admin_toolbar": "^3.0",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-recommended": "^9.1",
+        "drupal/scheduled_updates": "1.x-dev",
         "drush/drush": "^10.4",
         "vlucas/phpdotenv": "^5.3"
     },
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "bin-dir": "bin/",
