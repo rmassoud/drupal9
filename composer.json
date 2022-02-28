@@ -31,7 +31,13 @@
     "prefer-stable": true,
     "config": {
         "bin-dir": "bin/",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal/core-composer-scaffold": true
+        }
     },
     "autoload": {
         "files": ["load.environment.php"]
