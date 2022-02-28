@@ -20,7 +20,7 @@
         "drupal/admin_toolbar": "^3.0",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-recommended": "^9.1",
-        "drupal/scheduled_updates": "1.x-dev",
+        "drupal/entity_reference_override": "2.0.x-dev",
         "drush/drush": "^10.4",
         "vlucas/phpdotenv": "^5.3"
     },
@@ -70,6 +70,11 @@
             "web/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ]
+        },
+        "patches": {
+            "drupal/scheduled_updates": {
+                "https://www.drupal.org/project/scheduled_updates/issues/3172330#comment-14138669": "https://www.drupal.org/files/issues/2021-06-18/3172330-31.patch"
+            }
         }
     },
     "require-dev": {
