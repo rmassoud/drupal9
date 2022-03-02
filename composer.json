@@ -20,7 +20,7 @@
         "drupal/admin_toolbar": "^3.0",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-recommended": "^9.1",
-        "drupal/entity_reference_override": "2.0.x-dev",
+        "drupal/entity_reference_override": "^2.0.x-dev",
         "drush/drush": "^10.4",
         "vlucas/phpdotenv": "^5.3"
     },
