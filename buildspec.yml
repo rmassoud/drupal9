@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - $(aws ecr get-login-password --region ap-southeast-2)
+  build:
+    commands:
+      - docker buildx build -t drupal9:latest .
+      - docker tag drupal9:latest 303536629688.dkr.ecr.ap-southeast-2.amazonaws.com/drupal9:latest
+  post_build:
+    commands:
+      - docker push <ECR_URL>
+      - printf '[{"name":<TASK_DEFINITION_NAME>,"imageUri":"%s"}]' 303536629688.dkr.ecr.ap-southeast-2.amazonaws.com/drupal9:latest > imagedefinitions.json
+artifacts:
+  files: imagedefinitions.json
