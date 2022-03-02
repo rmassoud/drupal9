@@ -16,10 +16,10 @@ test:
 
 build:
 	docker build -t drupal9:latest .
+	docker tag drupal9:latest $(DOCKER_REPO):latest
 
 push:
 		aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin $(DOCKER_REPO)
-		docker tag drupal9:latest $(DOCKER_REPO):latest
   	docker push $(DOCKER_REPO):latest
 
 start:
