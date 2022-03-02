@@ -14,9 +14,9 @@ phases:
       - make build
   post_build:
     commands:
-      - aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin $Env:DOCKER_REPO
-      - docker tag drupal9:latest $Env:DOCKER_REPO:latest
-      - docker push $Env:DOCKER_REPO:latest
-      - printf '[{"name":"drupal9-php","imageUri":"$Env:DOCKER_REPO:latest"}]' > imagedefinitions.json
+      - aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin $DOCKER_REPO
+      - docker tag drupal9:latest $DOCKER_REPO:latest
+      - docker push $DOCKER_REPO:latest
+      - printf '[{"name":"drupal9-php","imageUri":"$DOCKER_REPO:latest"}]' > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
