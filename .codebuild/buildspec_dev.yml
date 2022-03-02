@@ -1,15 +1,18 @@
 version: 0.2
 
 phases:
+  install:
+    commands:
+      - make init
   pre_build:
     commands:
-      - make aws-ecr-login
+      - make test
   build:
     commands:
-      - docker build -t drupal9:latest .
+      - make build
   post_build:
     commands:
-      - make push-docker
+      - make push
       - printf '[{"name":"drupal9-php","imageUri":"303536629688.dkr.ecr.ap-southeast-2.amazonaws.com/drupal9:latest"}]' > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json

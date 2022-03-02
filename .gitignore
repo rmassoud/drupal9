@@ -20,3 +20,6 @@
 
 # Ignore create bin folder
 /bin/
+
+# Ignore build files
+imagedefinitions.json
