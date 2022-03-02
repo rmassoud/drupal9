@@ -15,7 +15,7 @@ test:
 	echo "Linting repository"
 
 build:
-	docker buildx build --platform=linux/amd64 -t drupal9:latest .
+	docker build -t drupal9:latest .
 
 push:
 		aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin $(DOCKER_REPO)
