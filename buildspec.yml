@@ -11,6 +11,6 @@ phases:
   post_build:
     commands:
       - docker push 303536629688.dkr.ecr.ap-southeast-2.amazonaws.com/drupal9:latest
-      - printf '[{"name":drupal9,"imageUri":"%s"}]' 303536629688.dkr.ecr.ap-southeast-2.amazonaws.com/drupal9:latest > imagedefinitions.json
+      - printf '[{"name":drupal9,"imageUri":"303536629688.dkr.ecr.ap-southeast-2.amazonaws.com/drupal9:latest"}]' > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
