@@ -3,14 +3,13 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin 303536629688.dkr.ecr.ap-southeast-2.amazonaws.com/drupal9
+      - make aws-ecr-login
   build:
     commands:
       - docker build -t drupal9:latest .
-      - docker tag drupal9:latest 303536629688.dkr.ecr.ap-southeast-2.amazonaws.com/drupal9:latest
   post_build:
     commands:
-      - docker push 303536629688.dkr.ecr.ap-southeast-2.amazonaws.com/drupal9:latest
+      - make push-docker
       - printf '[{"name":"drupal9-php","imageUri":"303536629688.dkr.ecr.ap-southeast-2.amazonaws.com/drupal9:latest"}]' > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
