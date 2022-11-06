@@ -18,13 +18,11 @@
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.2",
-        "drupal/bootstrap_barrio": "^5.5",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-recommended": "^9.1",
         "drupal/paragraphs": "^1.15",
-        "drupal/rate": "^3.0",
         "drupal/search_api": "^1.27",
-        "drush/drush": "^10.4",
+        "drush/drush": "^11.3",
         "vlucas/phpdotenv": "^5.3"
     },
     "conflict": {
