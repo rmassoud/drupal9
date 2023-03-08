@@ -20,6 +20,7 @@
         "drupal/admin_toolbar": "^3.2",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-recommended": "^9.1",
+        "drupal/core_views_facets": "^2.0",
         "drupal/paragraphs": "^1.15",
         "drupal/search_api": "^1.27",
         "drush/drush": "^11.3",
@@ -44,6 +45,7 @@
         "files": ["load.environment.php"]
     },
     "extra": {
+        "patches-file": "composer.patches.json",
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
@@ -77,11 +79,6 @@
             "web/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ]
-        },
-        "patches": {
-            "drupal/scheduled_updates": {
-                "https://www.drupal.org/project/scheduled_updates/issues/3172330#comment-14138669": "https://www.drupal.org/files/issues/2021-06-18/3172330-31.patch"
-            }
         }
     },
     "require-dev": {
